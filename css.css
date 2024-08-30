@@ -1,0 +1,78 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}c
+html{
+    font-family:baskervville-sc-regular {
+        font-family: "Baskervville SC", serif;
+        font-weight: 400;
+        font-style: normal;
+      } ;
+      font-size: 16px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,#4a4b4a,#548f49) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message-card{
+    width: 400px;
+    height: 90vh;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.message-card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.15);
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+.message-card img{
+    margin-bottom: 15px;
+    
+}
+.message-card h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color:#4a4b4a ;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input, textarea{
+    border: 0;
+    outline: none;
+    margin: 10px 0 ;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgb(255, 255, 255, 0.5);
+    width: 350px;
+}
+form button{
+    padding: 10px;
+    background: linear-gradient(to left,rgb(54, 54, 54),#548f49);
+    border: none;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    width: 150px;
+    color: #fff;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- <meta name="description" content="خبراء التسويق العقاري"> -->
+    <link rel="stylesheet" href="../Project/css.css">
+    <link rel="icon" href="../Project/icon/diagram-06_24511.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <div class="message-card">
+        <div class="logo-pic">
+            <img src="../Project/Photo/Building-pana.png" alt="logo-pic" width="150px">
+        </div>
+        <div class="titel">
+            <h1>للتواصل بنا املئ البيانات</h1>
+        </div>
+       <form onsubmit="sendEmail(); reset(); return false;" >
+       
+        <input id="name" type="text" placeholder="الاسم" required>
+        <input id="email" type="email" placeholder=" الايميل" required>
+        <input id="tel" type="text" placeholder=" رقم الموبايل " required>
+        <textarea name="" id="message" cols="30" rows="4" placeholder="اترك طلبك   "></textarea>
+        <button id="submit" type="submit">ارسال</button>
+
+       </form>
+
+    </div>
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+        Email.send({
+    SecureToken : "70fa7366-678a-4fac-a05d-fddae15e0faa",
+       To : 'salmaehab857@gmail.com',
+    From : "salmaehab857@gmail.com",
+    Subject : "This is the subject",
+    Body : "name:   " + 
+       document.getElementById("name").value  
+           +   "<br>  email:   "  +  document.getElementById("email").value
+           +   "<br>  tel:   "  +  document.getElementById("tel").value
+           +   "<br>  message:   "  +  document.getElementById("message").value
+
+}).then(
+  message => alert("message sent succesfully")
+);
+ 
+    }
+  </script>
+</body>
+</html>
